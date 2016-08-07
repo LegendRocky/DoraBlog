@@ -1,12 +1,12 @@
 import React from 'react';
 
-var Home = React.createClass({
+var Archives = React.createClass({
     render:function(){
         return (
             <div>
-                <h2>Home!!!</h2>
+                <h2>Archives!!!</h2>
             </div>
         )
     }
 });
-export default Home;
+export default Archives;

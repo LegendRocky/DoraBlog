@@ -10,9 +10,23 @@ var MenuComponent = React.createClass({
 	},
 	render:function(){
 		var sidebar = this.props.navs['sidebar'];
+		// var url = "http://localhost:9000/app/home",
+		// 	headers = {
+		// 		"Content-Type": "application/json"
+		// 	},
+		// 	body = {},
+		// 	method = "POST";
+		// fetch(url, headers, body, method, function(data) {
+		// 	console.log(data);
+		// })
+		console.log(ajax);
 		return (
 			<div className="sidebar">
-				<div className="avatar"></div>
+				<div className="profile">
+					<a></a>
+					<span>多啦博客</span>
+				</div>
+
 				<ul>
 					{
 						sidebar.map(function(nav, index){

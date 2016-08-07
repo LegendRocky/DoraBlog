@@ -4,12 +4,25 @@
   width: 250px;
   position: fixed;
 }
-.sidebar .avatar {
+.sidebar .profile {
+  width: 100%;
+  padding: 40px 0 10px 0;
+  box-sizing: border-box;
+}
+.sidebar .profile a {
   width: 140px;
   height: 140px;
-  border-radius: 70px;
-  background: white;
-  margin: 40px auto;
+  border-radius: 50%;
+  background-color: white;
+  display: block;
+  margin: 0 auto;
+}
+.sidebar .profile span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #999;
 }
 .sidebar ul {
   width: 100%;

@@ -25,12 +25,12 @@ var navgation =	{
 		},
 		{
 			"iconcss":"icon-file-pdf",
-			"url":"javascript:;",
+			"url":"/archives",
 			"text":"归档"
 		},
 		{
 			"iconcss":"icon-price-tags",
-			"url":"javascript:;",
+			"url":"/tags",
 			"text":"标签"
 		},
 		{
@@ -40,12 +40,12 @@ var navgation =	{
 		},
 		{
 			"iconcss":"icon-link",
-			"url":"javascript:;",
+			"url":"/links",
 			"text":"友链"
 		},
 		{
 			"iconcss":"icon-books",
-			"url":"javascript:;",
+			"url":"/books",
 			"text":"图书"
 		}
 	]

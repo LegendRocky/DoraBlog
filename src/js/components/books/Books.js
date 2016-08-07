@@ -1,12 +1,12 @@
 import React from 'react';
 
-var Home = React.createClass({
+var Books = React.createClass({
     render:function(){
         return (
             <div>
-                <h2>Home!!!</h2>
+                <h2>Books!!!</h2>
             </div>
         )
     }
 });
-export default Home;
+export default Books;
