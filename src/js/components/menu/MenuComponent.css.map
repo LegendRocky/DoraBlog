@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ;EACP,UAAU,EAAE,gCAAgC;EAC5C,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;EACZ,QAAQ,EAAE,KAAK;;AAGhB,OAAO;EACL,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,IAAI",
+"sources": ["MenuComponent.scss"],
+"names": [],
+"file": "MenuComponent.css"
+}
