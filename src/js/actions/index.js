@@ -1,22 +1,51 @@
-let nextTodoId = 0
-export const addTodo = (text) => {
+
+import shop from '../api/shop'
+import * as types from '../constants/ActionTypes'
+
+function receiveProducts(products) {
     return {
-        type: 'ADD_TODO',
-        id: nextTodoId++,
-        text
+        type: types.RECEIVE_PRODUCTS,
+        products
     }
 }
 
-export const setVisibilityFilter = (filter) => {
-    return {
-        type: 'SET_VISIBILITY_FILTER',
-        filter
+export function getAllProducts() {
+    return dispatch => {
+        shop.getProducts(products => {
+            dispatch(receiveProducts(products))
+        })
     }
 }
 
-export const toggleTodo = (id) => {
+function addToCartUnsafe(productId) {
     return {
-        type: 'TOGGLE_TODO',
-        id
+        type: types.ADD_TO_CART,
+        productId
+    }
+}
+
+export function addToCart(productId) {
+    return (dispatch, getState) => {
+        if (getState().products.byId[productId].inventory > 0) {
+            dispatch(addToCartUnsafe(productId))
+        }
+    }
+}
+
+export function checkout(products) {
+    return (dispatch, getState) => {
+        const cart = getState().cart
+
+        dispatch({
+            type: types.CHECKOUT_REQUEST
+        })
+        shop.buyProducts(products, () => {
+            dispatch({
+                type: types.CHECKOUT_SUCCESS,
+                cart
+            })
+            // Replace the line above with line below to rollback on failure:
+            // dispatch({ type: types.CHECKOUT_FAILURE, cart })
+        })
     }
 }
